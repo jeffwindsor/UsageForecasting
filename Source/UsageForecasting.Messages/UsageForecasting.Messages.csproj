@@ -39,7 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\IntervalValue.cs" />
     <Compile Include="DTO\Usage.cs" />
+    <Compile Include="DTO\UsageFrequency.cs" />
+    <Compile Include="DTO\UsageSource.cs" />
+    <Compile Include="DTO\UsageTimeOfUse.cs" />
+    <Compile Include="DTO\UsageUnitOfMeasure.cs" />
     <Compile Include="GetUsageForecastRequest.cs" />
     <Compile Include="IUsageForecastingMessage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

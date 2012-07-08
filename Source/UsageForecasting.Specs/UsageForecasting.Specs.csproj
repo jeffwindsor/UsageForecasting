@@ -76,9 +76,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UsageForecasting.Dal\UsageForecasting.Dal.csproj">
-      <Project>{a63f0139-2b85-4646-b465-5069246d2463}</Project>
-      <Name>UsageForecasting.Dal</Name>
+    <ProjectReference Include="..\UsageForecasting.Engines\UsageForecasting.Engines.csproj">
+      <Project>{e850a240-a805-4e09-aefe-f79a9bb36146}</Project>
+      <Name>UsageForecasting.Engines</Name>
     </ProjectReference>
     <ProjectReference Include="..\UsageForecasting.Managers\UsageForecasting.Managers.csproj">
       <Project>{afc6b5f5-aab0-4700-b32b-c2aa54313985}</Project>
@@ -87,10 +87,6 @@
     <ProjectReference Include="..\UsageForecasting.Messages\UsageForecasting.Messages.csproj">
       <Project>{1d399ea3-e95c-4dbc-902b-a71a1e4760d0}</Project>
       <Name>UsageForecasting.Messages</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\UsageForecasting\UsageForecasting.csproj">
-      <Project>{c78f8f4e-50b9-4d39-8c52-00818917ad8b}</Project>
-      <Name>UsageForecasting</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,11 +6,18 @@ using System.Threading.Tasks;
 
 namespace UsageForecasting.Messages.DTO
 {
-    public class Usage
+    public class Usage : IntervalValue
     {
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public Decimal Amount { get; set; }
-        //UOM
+        public Usage() { }
+        public Usage(Usage source, Decimal value) :
+            base(source, value)
+        {
+            TimeOfUse = source.TimeOfUse;
+            Source = source.Source;
+            //Frequency = source.Fwrequency;
+        }
+        public UsageTimeOfUse TimeOfUse { get; set; }
+        public UsageSource Source { get; set; }
+        //public UsageFrequency Frequency { get; set; }
     }
 }

@@ -49,13 +49,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Contexts\AccountContext.cs" />
+    <Compile Include="Contexts\UsageContext.cs" />
     <Compile Include="Contexts\UsageForecastServiceContext.cs" />
-    <Compile Include="Features\GetAUsageForecastForACustomerAccount.feature.cs">
+    <Compile Include="Steps\UsageEngineSteps.cs" />
+    <Compile Include="UsageEngine\SystemCanShapeSummaryUsageWithAnIntervalProfile.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SystemCanShapeSummaryUsageWithAnIntervalProfile.feature</DependentUpon>
+    </Compile>
+    <Compile Include="UsageForacstingService\GetAUsageForecastForACustomerAccount.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>GetAUsageForecastForACustomerAccount.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\RequestReForecastOfConsumerAccountUsage.feature.cs">
+    <Compile Include="UsageForacstingService\RequestReForecastOfConsumerAccountUsage.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RequestReForecastOfConsumerAccountUsage.feature</DependentUpon>
@@ -65,11 +72,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Features\GetAUsageForecastForACustomerAccount.feature">
+    <None Include="UsageEngine\SystemCanShapeSummaryUsageWithAnIntervalProfile.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SystemCanShapeSummaryUsageWithAnIntervalProfile.feature.cs</LastGenOutput>
+    </None>
+    <None Include="UsageForacstingService\GetAUsageForecastForACustomerAccount.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>GetAUsageForecastForACustomerAccount.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\RequestReForecastOfConsumerAccountUsage.feature">
+    <None Include="UsageForacstingService\RequestReForecastOfConsumerAccountUsage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>RequestReForecastOfConsumerAccountUsage.feature.cs</LastGenOutput>
     </None>

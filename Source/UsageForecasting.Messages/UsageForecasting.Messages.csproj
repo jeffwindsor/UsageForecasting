@@ -39,6 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\SharedAssemblyInfo.cs">
+      <Link>Properties\SharedAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="DTO\IntervalValue.cs" />
     <Compile Include="DTO\Usage.cs" />
     <Compile Include="DTO\UsageFrequency.cs" />

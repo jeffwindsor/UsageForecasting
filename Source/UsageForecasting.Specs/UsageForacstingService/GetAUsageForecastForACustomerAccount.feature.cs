@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UsageForecasting.Specs.Features
+namespace UsageForecasting.Specs.UsageForacstingService
 {
     using TechTalk.SpecFlow;
     
@@ -19,22 +19,22 @@ namespace UsageForecasting.Specs.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.8.1.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Can Request Re Forecast Of Consumer Account Usage")]
+    [NUnit.Framework.DescriptionAttribute("Get A Usage Forecast For A Customer Account")]
     [NUnit.Framework.CategoryAttribute("UsageForecasting")]
-    public partial class CanRequestReForecastOfConsumerAccountUsageFeature
+    public partial class GetAUsageForecastForACustomerAccountFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "RequestReForecastOfConsumerAccountUsage.feature"
+#line 1 "GetAUsageForecastForACustomerAccount.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Can Request Re Forecast Of Consumer Account Usage", "In order to keep forecasts up to date\r\nAs an api consumer\r\nI want to request the " +
-                    "re-forecasting of the accounts forecast seed data", ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Get A Usage Forecast For A Customer Account", "As a pricing engine\r\nI want to get a forecast of interval usage for a customer ac" +
+                    "count\r\nSo that I can price an account effectively", ProgrammingLanguage.CSharp, new string[] {
                         "UsageForecasting"});
             testRunner.OnFeatureStart(featureInfo);
         }

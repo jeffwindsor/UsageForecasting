@@ -9,11 +9,11 @@ namespace UsageForecasting.Messages.DTO
     public class Usage : IntervalValue
     {
         public Usage() { }
-        public Usage(Usage source, Decimal value) :
-            base(source, value)
+        public Usage(Usage usage, UsageSource source, Decimal value) :
+            base(usage, value)
         {
-            TimeOfUse = source.TimeOfUse;
-            Source = source.Source;
+            TimeOfUse = usage.TimeOfUse;
+            Source = source;
             //Frequency = source.Fwrequency;
         }
         public UsageTimeOfUse TimeOfUse { get; set; }

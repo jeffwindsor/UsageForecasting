@@ -11,7 +11,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UsageForecasting.Specs.Features
+namespace UsageForecasting.Specs.UsageEngine
 {
     using TechTalk.SpecFlow;
     
@@ -19,23 +19,26 @@ namespace UsageForecasting.Specs.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.8.1.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Get A Usage Forecast For A Customer Account")]
-    [NUnit.Framework.CategoryAttribute("UsageForecasting")]
-    public partial class GetAUsageForecastForACustomerAccountFeature
+    [NUnit.Framework.DescriptionAttribute("System Can Shape Summary Usage With An Interval Profile")]
+    [NUnit.Framework.CategoryAttribute("Usage")]
+    [NUnit.Framework.CategoryAttribute("Profiling")]
+    public partial class SystemCanShapeSummaryUsageWithAnIntervalProfileFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "GetAUsageForecastForACustomerAccount.feature"
+#line 1 "SystemCanShapeSummaryUsageWithAnIntervalProfile.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Get A Usage Forecast For A Customer Account", "In order to facilitate pricing\r\nAs an api consumer\r\nI want to get a forecast of i" +
-                    "nterval usage for a customer account", ProgrammingLanguage.CSharp, new string[] {
-                        "UsageForecasting"});
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "System Can Shape Summary Usage With An Interval Profile", "As a usage forecaster\r\n  I want to be able to profile summary usage\r\n  So that a " +
+                    "the result can be blended with other usage to get an accurate usage forecast for" +
+                    " an account", ProgrammingLanguage.CSharp, new string[] {
+                        "Usage",
+                        "Profiling"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -67,35 +70,26 @@ namespace UsageForecasting.Specs.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 7
- #line 8
-  testRunner.Given("a usage forecast service");
-#line hidden
-        }
-        
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Can obtain a forecast of for an account date range")]
-        public virtual void CanObtainAForecastOfForAnAccountDateRange()
+        [NUnit.Framework.DescriptionAttribute("The profile completely covers the summary usage")]
+        public virtual void TheProfileCompletelyCoversTheSummaryUsage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Can obtain a forecast of for an account date range", ((string[])(null)));
-#line 10
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("The profile completely covers the summary usage", ((string[])(null)));
+#line 8
  this.ScenarioSetup(scenarioInfo);
-#line 7
- this.FeatureBackground();
+#line 9
+  testRunner.Given("a summary usage for {1000} {kWh} from {1/1/2012} to {1/31/2012}");
+#line 10
+    testRunner.And("an hourly profile from {1/1/2012} to {1/31/2012}");
 #line 11
-  testRunner.Given("an account");
+   testRunner.When("the usage forecaster requests the summary usage be profiled");
 #line 12
-  testRunner.When("getting an {hourly} forecast from {1/1/2015} to {1/31/2015}");
+   testRunner.Then("the usage engine should return a profiled summary");
 #line 13
-  testRunner.Then("a usage forecast response is returned");
+    testRunner.And("the profiled summaries should range from {1/1/2012} to {1/31/2012}");
 #line 14
-  testRunner.Then("the response has {744} usages");
-#line 15
-  testRunner.Then("the minimum usage start date is {1/1/2015}");
-#line 16
-  testRunner.Then("the maximum usage end date is {1/31/2015}");
+    testRunner.And("the profiled summary values should be equal to the profile value times the unit v" +
+                    "alue");
 #line hidden
             this.ScenarioCleanup();
         }
